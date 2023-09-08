@@ -3,6 +3,9 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
+// Components
+import { ChatArea } from "./components/ChatArea";
+
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
@@ -46,6 +49,8 @@ function App() {
       </form>
 
       <p>{greetMsg}</p>
+
+      <ChatArea />
     </div>
   );
 }
