@@ -36,10 +36,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "resizable": true,
-        "title": "saga-gpt",
-        "width": 800,
-        "height": 600
+        "resizable": false,
+        "title": "SagaGPT",
+        "width": 1200,
+        "height": 800
       }
     ]
   }

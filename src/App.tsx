@@ -1,28 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/tauri";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Components
-import { ChatArea } from "./components/ChatArea";
+// Pages
+import ChatPage from "./pages/chat";
+import SettingsPage from "./pages/settings";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <ChatPage />,
+    },
+    {
+      path: "/settings",
+      element: <SettingsPage />,
+    },
+  ]);
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
-  return (
-    <div className="container mx-auto p-2">
-      <section className="flex flex-col justify-between h-screen">
-        <h1>Welcome to Tauri!</h1>
-
-        <ChatArea />
-      </section>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
