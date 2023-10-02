@@ -6,7 +6,7 @@ import logo from "../../assets/logo.svg";
 
 export const ChatHistory = () => {
   return (
-    <div className="flex h-screen flex-col min-w-content justify-between border-e bg-white">
+    <div className="flex h-screen w-[250px] flex-col min-w-content justify-between border-e bg-white">
       <div className="px-4 py-6">
         <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600">
           <img src={logo} alt="Logo" className="" />

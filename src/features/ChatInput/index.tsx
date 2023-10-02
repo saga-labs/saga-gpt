@@ -1,6 +1,10 @@
 import React from "react";
 
-export const ChatArea = () => {
+interface Props {
+  handler: (message: string) => void;
+}
+
+export const ChatInput: React.FC<Props> = ({ handler }) => {
   return (
     <div>
       <label htmlFor="OrderNotes" className="sr-only">
@@ -19,6 +23,7 @@ export const ChatArea = () => {
           <button
             type="button"
             className="rounded bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700"
+            onClick={() => handler("Hello")}
           >
             Add
           </button>
