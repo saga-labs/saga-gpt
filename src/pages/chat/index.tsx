@@ -4,7 +4,7 @@ import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 // Global components
-import Layout from "../../features/Layout/Layout";
+import Layout from "../../features/Layout";
 
 // Feature Components
 import { ChatInput } from "../../features/ChatInput";
@@ -14,7 +14,10 @@ interface ChatAppProps {}
 
 const ChatPage: React.FC<ChatAppProps> = () => {
   const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("Frederik");
+
+  async function greet() {
+    setGreetMsg(await invoke("greet", { name }));
+  }
 
   // Messages
   const [messages, setMessages] = useState([
@@ -35,9 +38,6 @@ const ChatPage: React.FC<ChatAppProps> = () => {
     setMessages([...messages, newMessage]);
   };
 
-  async function greet() {
-    setGreetMsg(await invoke("greet", { name }));
-  }
 
   return (
     <Layout>
@@ -51,6 +51,7 @@ const ChatPage: React.FC<ChatAppProps> = () => {
           />
         ))}
       </div>
+
       <ChatInput handler={handleSendMessage} />
     </Layout>
   );

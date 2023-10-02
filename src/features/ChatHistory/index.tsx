@@ -1,24 +1,21 @@
-import React from "react";
-
-
 // assets
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo2.svg";
 
 export const ChatHistory = () => {
   return (
     <div className="flex h-screen w-[250px] flex-col min-w-content justify-between border-e bg-white">
       <div className="px-4 py-6">
         <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600">
-          <img src={logo} alt="Logo" className="" />
+          <img src={logo} alt="Logo" className="mx-auto" />
         </span>
 
         <ul className="mt-6 space-y-1">
           <li>
             <a
-              href=""
+              href="/"
               className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
             >
-              General
+              Chat
             </a>
           </li>
 
@@ -67,10 +64,10 @@ export const ChatHistory = () => {
 
           <li>
             <a
-              href=""
+              href="/settings"
               className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
             >
-              Billing
+              Settings
             </a>
           </li>
 
