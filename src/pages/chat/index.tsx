@@ -13,31 +13,28 @@ import { Message } from "../../features/ChatMsg";
 interface ChatAppProps {}
 
 const ChatPage: React.FC<ChatAppProps> = () => {
-  const [greetMsg, setGreetMsg] = useState("");
+  // const [greetMsg, setGreetMsg] = useState("");
 
-  async function greet() {
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
-  // Messages
+  // prettier-ignore
   const [messages, setMessages] = useState([
-    { sender: "User1", content: "Hey, how's it going?" },
-    { sender: "User2", content: "Hi! It's going well. I just got back from a weekend camping trip." },
-    { sender: "User1", content: "That sounds awesome! Tell me more about it." },
-    { sender: "User2", content: "Sure, it was a beautiful experience. We camped by the lake, did some hiking, and had a bonfire at night." },
-    // { sender: "User1", content: "Sounds like a perfect getaway! Did you see any wildlife?" },
-    // { sender: "User2", content: "Yes, we spotted some deer and even saw a bald eagle soaring above the lake. It was breathtaking." },
-    // { sender: "User1", content: "Wow, that's amazing! I've always wanted to see a bald eagle in the wild." },
-    // { sender: "User2", content: "It was a once-in-a-lifetime moment, for sure. How have you been lately?" },
+    { sender: "Frederik", content: "Hey, how's it going?" },
+    { sender: "GPT-4", content: "Hi! It's going well. I just got back from a weekend camping trip." },
+    { sender: "Frederik", content: "That sounds awesome! Tell me more about it." },
+    { sender: "GPT-4", content: 
+    "Sure, it was a beautiful experience. We camped by the lake, did some hiking, and had a bonfire at night. Sure, it was a beautiful experience. We camped by the lake, did some hiking, and had a bonfire at night.Sure, it was a beautiful experience. We camped by the lake, did some hiking, and had a bonfire at night.Sure, it was a beautiful experience. We camped by the lake, did some hiking, and had a bonfire at night.   " 
+  },
   ]);
-  
+
+  // async function greet() {
+  //   setGreetMsg(await invoke("greet", { name }));
+  // }
+
   // Message Handler
   const handleSendMessage = (message: string) => {
     // Add a new message to the chat
-    const newMessage = { sender: "User1", content: message };
+    const newMessage = { sender: "Frederik", content: message };
     setMessages([...messages, newMessage]);
   };
-
 
   return (
     <Layout>
@@ -47,7 +44,7 @@ const ChatPage: React.FC<ChatAppProps> = () => {
             key={index}
             sender={message.sender}
             content={message.content}
-            isUser={message.sender === "User1"}
+            isUser={message.sender === "Frederik"}
           />
         ))}
       </div>

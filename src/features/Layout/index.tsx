@@ -4,6 +4,9 @@ import clsx from "clsx";
 // Components
 import { ChatHistory } from "../ChatHistory";
 
+// Icons
+import { ViewVerticalIcon } from "@radix-ui/react-icons";
+
 // Interfaces
 interface props {
   children: React.ReactNode | React.ReactNode[];
@@ -16,17 +19,21 @@ const Layout = ({ children }: props) => {
   return (
     <main className="h-screen overflow-hidden flex flex-row bg-gradient-to-r from-indigo-100 via-red-100 to-yellow-100">
       {showHistory && <ChatHistory />}
-      <button
-        className="absolute top-0 right-0 p-4"
-        onClick={() => setShowHistory(!showHistory)}
-      >
-        Sidebar
-      </button>
+      {!showHistory && (
+        <button
+          className="absolute top-4 left-4 p-2 z-50 rounded bg-white border"
+          onClick={() => setShowHistory(!showHistory)}
+        >
+          <ViewVerticalIcon className="w-4 h-4" />
+        </button>
+      )}
+
       <section
         className={clsx(
-          "flex flex-col justify-between h-screen  mx-auto w-full p-4",
+          "container flex flex-col justify-between h-screen  mx-auto w-full p-4 pt-16",
           !fullWidth && "max-w-[960px]"
         )}
+        onClick={() => setShowHistory(false)}
       >
         {children}
       </section>

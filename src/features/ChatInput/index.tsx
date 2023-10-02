@@ -35,7 +35,7 @@ export const ChatInput: React.FC<Props> = ({ handler }) => {
         <textarea
           id="PromptArea"
           className="w-full resize-none border-none align-center focus:ring-0 sm:text-sm"
-          rows={1}
+          rows={3}
           placeholder="Send a message"
           value={message} // Bind the value of the textarea to the 'message' state
           onChange={handleOnChange}
