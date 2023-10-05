@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // Icons
 import { Link2Icon } from "@radix-ui/react-icons";
@@ -35,20 +36,24 @@ export const Message: React.FC<MessageProps> = ({
   }, []);
 
   return (
-    <article className="rounded border border-gray-100 bg-white opacity-75">
+    <article className="rounded border border-gray-100 bg-white">
       <div className="flex items-start gap-4 p-4">
         <div className="block shrink-0">
           {isUser ? (
-            <img
+            <Image
               alt="Speaker"
               src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=60"
               className="h-10 w-10 rounded-sm object-cover"
+              width={40}
+              height={40}
             />
           ) : (
-            <img
+            <Image
               alt="Speaker"
               src="https://images.unsplash.com/photo-1670163426610-69cdc930f4e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=60"
               className="h-10 w-10 rounded-sm object-cover"
+              width={40}
+              height={40}
             />
           )}
         </div>

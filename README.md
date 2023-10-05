@@ -1,61 +1,36 @@
-# SagaGPT
-
-SagaGPT is a desktop application that serves as a convenient wrapper for ChatGPT. It combines the power of Rust (Tauri) for the backend and Vite (React) for the frontend to provide a seamless and interactive ChatGPT experience right on your desktop.
-
-## Features
-
-- **Desktop Integration:** SagaGPT brings the capabilities of ChatGPT to your desktop, allowing you to interact with it without needing a web browser.
-
-- **User-Friendly Interface:** The user interface is built with React, providing an intuitive and responsive design for a comfortable chat experience.
-
-- **Fast and Efficient:** Thanks to Rust (Tauri), SagaGPT is both fast and resource-efficient, ensuring smooth performance on your desktop.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-To get started with SagaGPT, follow these simple steps:
+First, run the development server:
 
-1. **Clone the Repository:**
-   ```
-   git clone https://github.com/your-username/SagaGPT.git
-   ```
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-2. **Install Dependencies:**
-   ```
-   cd SagaGPT
-   npm install
-   ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-3. **Build the Application:**
-   ```
-   npm run build
-   ```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-4. **Run SagaGPT:**
-   ```
-   npm start
-   ```
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Now you can start chatting with ChatGPT on your desktop!
+## Learn More
 
-## Configuration
+To learn more about Next.js, take a look at the following resources:
 
-You can configure SagaGPT by modifying the settings in the `config.json` file. Customize the app to suit your preferences and needs.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Contributing
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-SagaGPT is an open-source project, and we welcome contributions from the community. Feel free to submit bug reports, feature requests, or even pull requests to help make SagaGPT better.
+## Deploy on Vercel
 
-1. Fork the repository.
-2. Create a new branch for your contribution.
-3. Make your changes and commit them.
-4. Create a pull request, describing your changes and their purpose.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## License
-
-SagaGPT is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us at [your-email@example.com](mailto:your-email@example.com).
-
-Enjoy using SagaGPT!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

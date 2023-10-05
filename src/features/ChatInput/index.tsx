@@ -57,7 +57,7 @@ export const ChatInput: React.FC<Props> = ({ handler }) => {
 
 const CommmandPalette = () => {
   return (
-    <ul className="space-y-1 bg-white rounded-lg border border-gray-200 shadow-sm mb-2">
+    <ul className="sticky space-y-1 bg-white rounded-lg border border-gray-200 shadow-sm mb-2">
       <li>
         <a
           href=""
