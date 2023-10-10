@@ -50,6 +50,14 @@ export const ChatSideBar = ({ path, active, setShowHistory }: Props) => {
             <LinkItem route="/agents" path={path} desc="Agents" />
           </li>
 
+          <li>
+            <LinkItem route="/test" path={path} desc="Completion" />
+          </li>
+
+          <li>
+            <LinkItem route="/chat" path={path} desc="Chat" />
+          </li>
+
           {/*         
           <li>
             <details className="group [&_summary::-webkit-details-marker]:hidden">

@@ -25,11 +25,11 @@ export default function RootLayout({ children }: props) {
   const [fullWidth, _] = useState<boolean>(false);
 
   const pathname = usePathname();
-
+  
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="h-screen overflow-hidden flex flex-row bg-gradient-to-r from-indigo-100 via-red-100 to-yellow-100">
+        <main className="h-screen overflow-y-scroll overflow-x-hidden flex flex-row bg-gradient-to-r from-indigo-100 via-red-100 to-yellow-100">
           {showHistory && <ChatSideBar path={pathname} active={showHistory} setShowHistory={setShowHistory}/>}
 
           {!showHistory && (
