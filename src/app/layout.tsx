@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 // Components
-import { ChatHistory } from '../features/ChatHistory';
+import { ChatSideBar } from '../features/ChatSideBar';
 
 // Icons
 import { ViewVerticalIcon } from '@radix-ui/react-icons';
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: props) {
     <html lang="en">
       <body className={inter.className}>
         <main className="h-screen overflow-hidden flex flex-row bg-gradient-to-r from-indigo-100 via-red-100 to-yellow-100">
-          {showHistory && <ChatHistory path={pathname} />}
+          {showHistory && <ChatSideBar path={pathname} active={showHistory} setShowHistory={setShowHistory}/>}
 
           {!showHistory && (
             <button

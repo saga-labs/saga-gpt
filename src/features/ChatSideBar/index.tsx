@@ -1,17 +1,22 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 // Local Components
-import { LinkItem } from "./components/LinkItem";
+import { LinkItem } from './components/LinkItem';
+
+// Icons
+import { ViewVerticalIcon } from '@radix-ui/react-icons';
 
 type Props = {
   path?: string;
+  active: boolean;
+  setShowHistory: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const ChatHistory = ({ path }: Props) => {
+export const ChatSideBar = ({ path, active, setShowHistory }: Props) => {
   return (
     <div className="flex h-screen w-[250px] flex-col min-w-content justify-between border-e bg-white">
       <div className="px-4 py-6">
-        <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 w-full">
+        <span className="flex h-10 place-content-center rounded-lg text-xs text-gray-600 w-full">
           <Image
             src="/logo2.svg"
             alt="Logo"
@@ -19,6 +24,13 @@ export const ChatHistory = ({ path }: Props) => {
             width={128}
             height={40}
           />
+
+          <button
+            className="p-2 z-50 rounded bg-white border aspect-square"
+            onClick={() => setShowHistory(!active)}
+          >
+            <ViewVerticalIcon className="w-4 h-4 mx-auto" />
+          </button>
         </span>
 
         <ul className="mt-6 space-y-1">
