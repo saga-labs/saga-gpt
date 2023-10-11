@@ -1,7 +1,7 @@
 {
-  "/api/chat/route": "static/webpack/app/api/chat/route.bc61618bb198bce0.hot-update.js",
+  "/api/chat/route": "app/api/chat/route.js",
   "/page": "app/page.js",
-  "/test/page": "app/test/page.js",
-  "/not-found": "app/not-found.js",
-  "/chat/page": "app/chat/page.js"
+  "/chat/page": "app/chat/page.js",
+  "/agents/page": "app/agents/page.js",
+  "/test/page": "app/test/page.js"
 }

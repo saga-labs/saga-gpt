@@ -56,7 +56,7 @@ export default function Home() {
         </div>
 
         {/* Messages */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-1">
           {messages.map((message, index) => (
             <Message
               key={index}
