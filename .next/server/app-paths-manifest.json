@@ -1,7 +1,3 @@
 {
-  "/api/chat/route": "app/api/chat/route.js",
-  "/page": "app/page.js",
-  "/chat/page": "app/chat/page.js",
-  "/agents/page": "app/agents/page.js",
-  "/test/page": "app/test/page.js"
+  "/page": "app/page.js"
 }

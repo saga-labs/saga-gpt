@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* action buttons */}
-      <div>
+      <div className=''>
         <div className="flex flex-row justify-end space-x-1 pb-4">
           <button className="left-4 p-2 z-50 rounded bg-white border">
             <ExclamationTriangleIcon className="w-4 h-4" />
