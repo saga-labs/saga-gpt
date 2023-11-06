@@ -1,6 +1,6 @@
 'use client';
 
-import './globals.css';
+import '../globals.css';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { Inter } from 'next/font/google';
@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 // Components
-import { ChatSideBar } from '../features/ChatSideBar';
+import { ChatSideBar } from '../../features/ChatSideBar';
 
 // Icons
 import { ViewVerticalIcon } from '@radix-ui/react-icons';
@@ -25,12 +25,18 @@ export default function RootLayout({ children }: props) {
   const [fullWidth, _] = useState<boolean>(false);
 
   const pathname = usePathname();
-  
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <main className="h-screen overflow-y-scroll overflow-x-hidden flex flex-row bg-gradient-to-r from-indigo-100 via-red-100 to-yellow-100">
-          {showHistory && <ChatSideBar path={pathname} active={showHistory} setShowHistory={setShowHistory}/>}
+          {showHistory && (
+            <ChatSideBar
+              path={pathname}
+              active={showHistory}
+              setShowHistory={setShowHistory}
+            />
+          )}
 
           {!showHistory && (
             <button
