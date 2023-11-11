@@ -9,7 +9,7 @@ import { AgentItem } from './components/agent-item';
 
 const index = () => {
   const [agentsList, _] = useState(agents);
-  const [historyList, __] = useState(agents);
+  const [historyList, __] = useState([]);
 
   return (
     <div className="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-gray-100">
@@ -133,7 +133,7 @@ const index = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-              <span className="ml-2 leading-none font-semibold text-sm">
+              <span className="ml-2 leading-none font-medium text-sm">
                 History
               </span>
             </button>
@@ -170,15 +170,101 @@ const index = () => {
               </svg>
             </button>
           </div>
-
-          {/** List Content */}
           <div id="channels_list">
-            {historyList.agents.map((_, i: React.Key) => (
-              <>
-                <HistoryItem key={i} />
-                <HistoryItem key={i} />
-              </>
-            ))}
+            <a
+              className="flex items-center h-8 bg-gray-300 text-sm pl-8 pr-3"
+              href="#"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span className="ml-2 leading-none font-bold">
+                council-of-elrond
+              </span>
+            </a>
+            <a
+              className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
+              href="#"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span className="ml-2 leading-none">the-fellowship</span>
+            </a>
+            <a
+              className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
+              href="#"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span className="ml-2 leading-none">and-another</span>
+            </a>
+            <a
+              className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
+              href="#"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span className="ml-2 leading-none font-bold">
+                second-breakfast-fans
+              </span>
+            </a>
+            <a
+              className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
+              href="#"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span className="ml-2 leading-none">anduril-smithy-club</span>
+            </a>
           </div>
         </div>
 
@@ -202,7 +288,7 @@ const index = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-              <span className="ml-2 leading-none font-semibold text-sm">
+              <span className="ml-2 leading-none font-medium text-sm">
                 Agents
               </span>
             </button>
