@@ -39,6 +39,10 @@ export const ChatSideBar = ({ path, active, setShowHistory }: Props) => {
           </li>
 
           <li>
+            <LinkItem route="/chat-new" path={path} desc="Chat" />
+          </li>
+
+          <li>
             <LinkItem route="/settings" path={path} desc="Settings" />
           </li>
 
