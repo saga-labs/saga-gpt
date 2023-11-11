@@ -18,8 +18,8 @@ const ChatMain = () => {
       {/* Chat Header */}
       <div className="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
         <div>
-          <h1 className="text-sm font-bold leading-none">
-            Conversation: {chat?.chat_title}
+          <h1 className="text font-semibold leading-none">
+            {chat?.chat_title}
           </h1>
           <span className="text-xs leading-none">{chat.updated_at}</span>
         </div>
