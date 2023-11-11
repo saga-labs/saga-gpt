@@ -37,7 +37,7 @@ export default function Page() {
 export const ModelCard = () => {
   return (
     <Link href={'/feed'}>
-      <article className="rounded border border-gray-100 bg-gray-100 p-4 shadow-sm transition sm:p-6">
+      <article className="rounded border border-gray-200 bg-gray-100 p-4 transition sm:p-6">
         <div className="relative w-10 h-10 rounded-md hover:rounded-lg hover:shadow border bg-white/70 border-gray-300 flex items-center justify-center">
           <Image src={'/openai.png'} alt={'model'} width={28} height={28} />
         </div>
@@ -54,7 +54,7 @@ export const ModelCard = () => {
         </p>
 
         <span className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
-          Setup
+          Setup Model
           <span
             aria-hidden="true"
             className="block transition-all group-hover:ms-0.5"

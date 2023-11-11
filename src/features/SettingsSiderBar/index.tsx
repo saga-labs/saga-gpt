@@ -15,7 +15,7 @@ const index = () => {
     <div className="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-gray-100">
       <button className="flex-shrink-0 relative text-sm focus:outline-none group">
         <div className="flex items-center justify-between w-full h-16 px-4 border-b border-gray-300 hover:bg-gray-300">
-          <span className="font-medium">GPT-4</span>
+          <span className="font-medium">Keith Sutherland</span>
           <svg
             className="w-4 h-4"
             xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ const index = () => {
                 />
               </svg>
               <span className="ml-2 leading-none font-medium text-sm">
-                History
+                Configured Models
               </span>
             </button>
             <button className="items-center justify-center h-6 w-6 ml-auto rounded hidden group-hover:flex hover:bg-gray-300">
@@ -188,7 +188,7 @@ const index = () => {
                 />
               </svg>
               <span className="ml-2 leading-none font-bold">
-                council-of-elrond
+                GPT-3.5 Turbo
               </span>
             </a>
             <a
@@ -207,7 +207,7 @@ const index = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-              <span className="ml-2 leading-none">the-fellowship</span>
+              <span className="ml-2 leading-none">GPT-4</span>
             </a>
             <a
               className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
@@ -225,7 +225,7 @@ const index = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-              <span className="ml-2 leading-none">and-another</span>
+              <span className="ml-2 leading-none">Llama2 [7B]</span>
             </a>
             <a
               className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
@@ -244,7 +244,7 @@ const index = () => {
                 />
               </svg>
               <span className="ml-2 leading-none font-bold">
-                second-breakfast-fans
+                Mistral [7B]
               </span>
             </a>
             <a
@@ -263,12 +263,12 @@ const index = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-              <span className="ml-2 leading-none">anduril-smithy-club</span>
+              <span className="ml-2 leading-none">Vicuna</span>
             </a>
           </div>
         </div>
 
-        {/* Model Agents */}
+        {/* Model Datastore */}
         <div className="mt-4">
           {/** List Header */}
           <div className="flex items-center h-8 px-3 group">
@@ -289,7 +289,7 @@ const index = () => {
                 />
               </svg>
               <span className="ml-2 leading-none font-medium text-sm">
-                Agents
+                Data Sync
               </span>
             </button>
             <button className="items-center justify-center h-6 w-6 ml-auto rounded hidden group-hover:flex hover:bg-gray-300">
