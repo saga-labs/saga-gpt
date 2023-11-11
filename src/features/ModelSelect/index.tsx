@@ -10,12 +10,10 @@ export const ModelSelect = () => {
       <div className="flex flex-col space-y-3 items-center flex-shrink-0">
         <Button link="/chat" image="/openai.png" alt="OpenAI" />
         <Button link="/chat" image="/meta.png" alt="LLaMa2" />
-        <Button link="/chat" image="/openai.png" alt="OpenAI" />
-        <Button link="/chat" image="/meta.png" alt="LLaMa2" />
 
         <Link
           href="/settings"
-          className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent hover:bg-gray-400"
+          className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent hover:bg-gray-300"
         >
           <svg
             className="w-6 h-6 fill-current"
@@ -25,9 +23,9 @@ export const ModelSelect = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M12 6v6m0 0v6m0-6h6m-6 0H6"
             ></path>
           </svg>

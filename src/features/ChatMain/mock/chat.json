@@ -5,7 +5,7 @@
     "username": "john_doe",
     "avatar": "/avatars/john_doe.jpg"
   },
-  "chat_title": "Test Chat",
+  "chat_title": "Open-Source LLM Development Mission",
   "chat_description": "A test conversation between a user and an AI.",
   "created_at": "2019-12-12T12:12:12",
   "updated_at": "2019-12-12T12:12:12",

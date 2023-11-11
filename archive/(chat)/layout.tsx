@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 // Components
-import { ChatSideBar } from '../../src/features/ChatSideBar';
+import { ChatSideBar } from '../ChatSideBar';
 
 // Icons
 import { ViewVerticalIcon } from '@radix-ui/react-icons';

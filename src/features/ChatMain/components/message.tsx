@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 // interfaces & types
 import { MessageType } from '../interfaces/chat';
@@ -6,7 +7,19 @@ import { MessageType } from '../interfaces/chat';
 export const Message = ({ message }: { message: MessageType }) => {
   return (
     <div className="flex px-4 py-3">
-      <div className="h-10 w-10 rounded flex-shrink-0 bg-gray-300"></div>
+      <div className="relative w-10 h-10 rounded-md bg-white/70 border-gray-300 flex items-center justify-center">
+        {message.sender === 'ai' ? (
+          <Image src="/openai.png" alt="AI" width={28} height={28} />
+        ) : (
+          <Image
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=3280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="User"
+            width={40}
+            height={40}
+            className="rounded-md"
+          />
+        )}
+      </div>
       <div className="ml-2">
         <div className="-mt-1">
           <span className="text-sm font-semibold">{message.sender}</span>
@@ -15,12 +28,7 @@ export const Message = ({ message }: { message: MessageType }) => {
           </span>
         </div>
         <p className="text-sm">{message.message}</p>
-        {/* <div className="flex space-x-2 mt-1">
-          <button className="flex items-center pl-1 pr-2 h-5 bg-gray-300 hover:bg-gray-400 rounded-full text-xs">
-            <span>❤️</span>
-            <span className="ml-1 font-medium">5</span>
-          </button>
-        </div> */}
+        
         {message.sender === 'ai' && (
           <div className="flex items-center mt-2">
             <div className="h-6 w-6 rounded flex-shrink-0 bg-gray-300"></div>

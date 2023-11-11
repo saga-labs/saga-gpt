@@ -1,7 +1,5 @@
 'use client';
-
 import React from 'react';
-import Image from 'next/image';
 
 // Components
 import ModelSelect from '@/features/ModelSelect';
