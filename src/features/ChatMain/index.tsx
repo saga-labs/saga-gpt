@@ -4,7 +4,7 @@ import mockData from './mock/chat.json';
 
 // components
 import { Message } from './components/message';
-import { Message as Msg } from '@/features/ChatMsg';
+import { Message as Msg } from '@/features/ChatMain/components/ChatMsg';
 import { ChatInput } from './components/chat-input';
 
 // interfaces & types

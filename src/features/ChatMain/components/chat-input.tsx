@@ -22,7 +22,7 @@ export const ChatInput = () => {
         </button>
         <textarea
           className="flex-grow text-sm px-3 border-l border-gray-300 ml-1 resize-none"
-          placeholder="Message council-of-elrond"
+          placeholder="Message"
           cols={0}
           rows={1}
         ></textarea>

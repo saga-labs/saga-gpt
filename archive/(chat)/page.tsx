@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
 
 // Local Components
-import { Message } from '@/features/ChatMsg';
-import { ChatInput } from '@/features/ChatInput';
+import { Message } from '@/features/ChatMain/components/ChatMsg';
+import { ChatInput } from '@/features/ChatMain/components/ChatInput';
 
 // Icons
 import {
