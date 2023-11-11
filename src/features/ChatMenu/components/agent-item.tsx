@@ -7,7 +7,7 @@ import { AgentType } from '../interfaces/agent';
 export const AgentItem = ({ agent }: { agent: AgentType }) => {
   return (
     <Link
-      className="flex items-center h-8 hover:bg-gray-300 text-sm pl-3 pr-3"
+      className="flex items-center h-8 hover:bg-gray-300 text-sm pl-8 pr-3"
       href="#"
     >
       <div className="flex justify-center w-4">

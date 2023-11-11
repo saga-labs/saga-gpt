@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HistoryItem = () => {
   return (
-    <a className="flex items-center h-8 bg-none hover:bg-gray-300 text-sm pl-3 pr-3" href="#">
+    <a className="flex items-center h-8 bg-none hover:bg-gray-300 text-sm pl-8 pr-3" href="#">
       <svg
         className="h-4 w-4"
         xmlns="http://www.w3.org/2000/svg"

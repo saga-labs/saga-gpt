@@ -4,6 +4,7 @@ import mockData from './mock/chat.json';
 
 // components
 import { Message } from './components/message';
+import { Message as Msg } from '@/features/ChatMsg';
 import { ChatInput } from './components/chat-input';
 
 // interfaces & types
@@ -27,7 +28,15 @@ const ChatMain = () => {
       {/* Chat History */}
       <div className="flex flex-col flex-grow overflow-auto">
         {chat?.messages.map((message: MessageType, key: React.Key) => (
-          <Message key={key} message={message} />
+          <>
+            <Message key={key} message={message} />
+            <Msg
+              key={key}
+              sender={message.sender}
+              content={message.message}
+              isUser={true}
+            />
+          </>
         ))}
 
         {/* Date Divider */}
