@@ -10,7 +10,7 @@ import ChatMain from '@/features/ChatMain';
 import ChatOffside from '@/features/ChatOffside';
 
 export default function Page() {
-  const [showOffside, setShowOffside] = React.useState(false);
+  const [showOffside, _] = React.useState(false);
   return (
     <main className="flex w-screen h-screen text-gray-700">
       {/* Model Selection Sidebar */}
@@ -20,7 +20,9 @@ export default function Page() {
       <ChatMenu />
 
       {/* Chat Main */}
-      <ChatMain />
+      <section>
+        Hello World
+      </section>
 
       {/* Offside  */}
       {showOffside && <ChatOffside />}

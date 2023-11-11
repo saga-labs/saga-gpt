@@ -1,7 +1,4 @@
 import '../globals.css';
-import clsx from 'clsx';
-import { useState } from 'react';
-import { Inter } from 'next/font/google';
 
 export const metadata = {
   title: 'Next.js',

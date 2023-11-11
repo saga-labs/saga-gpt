@@ -6,7 +6,7 @@ import { invoke } from '@tauri-apps/api/tauri';
 // Local Components
 // import { Test } from '@/components/test'
 
-export default function Page() {
+export default function Home() {
   useEffect(() => {
     invoke<string>('greet', { name: 'Next.js' })
       .then(console.log)
