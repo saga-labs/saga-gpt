@@ -151,9 +151,7 @@ const index = () => {
           {/** List Content */}
           <div id="channels_list">
             {historyList.agents.map((_, i: React.Key) => (
-              <>
-                <HistoryItem key={i} />
-              </>
+              <HistoryItem key={i} />
             ))}
           </div>
         </div>
@@ -174,13 +172,13 @@ const index = () => {
               <DotsThreeVertical className="h-5 w-5" />
             </button>
             <button className="flex items-center justify-center h-6 w-6 ml-1 rounded hover:bg-gray-300">
-              <Plus className="h-4 w-4" weight='bold'/>
+              <Plus className="h-4 w-4" weight="bold" />
             </button>
           </div>
 
           {/** List Content */}
           <div id="agents_list">
-            {agentsList.agents.map((agent, i: React.Key) => (
+            {agentsList.agents.map((agent) => (
               <AgentItem agent={agent} key={agent.id} />
             ))}
           </div>
