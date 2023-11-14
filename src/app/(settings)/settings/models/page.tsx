@@ -4,8 +4,8 @@ import React from 'react';
 
 // Components
 import ModelSelect from '@/features/ModelSelect';
-import ChatMenu from '@/features/ChatMenu';
-// import ChatMain from '@/features/ChatMain';
+import SettingsSideBar from '@/features/SettingsSideBar';
+import ModelGrid from '@/features/ModelGrid';
 import ChatOffside from '@/features/ChatOffside';
 
 export default function Page() {
@@ -16,10 +16,10 @@ export default function Page() {
       <ModelSelect />
 
       {/* Chat History & Settings */}
-      <ChatMenu />
+      <SettingsSideBar />
 
-      {/* Chat Main */}
-      <p>Hello World</p>
+      {/* Page Main */}
+      <ModelGrid />
 
       {/* Offside  */}
       {showOffside && <ChatOffside />}

@@ -16,9 +16,9 @@ const ModelGrid = () => {
       <div className="flex items-center flex-shrink-0 h-16 bg-white border-b border-gray-300 px-4">
         <div>
           <h1 className="text font-semibold leading-none">
-            Model Header
+            Available Models
           </h1>
-          <span className="text-xs leading-none">damn</span>
+          <span className="text-xs leading-none">Select any of the available models to get started chatting</span>
         </div>
       </div>
 

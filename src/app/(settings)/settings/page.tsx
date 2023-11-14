@@ -8,6 +8,11 @@ import SettingsSideBar from '@/features/SettingsSideBar';
 import ModelGrid from '@/features/ModelGrid';
 import ChatOffside from '@/features/ChatOffside';
 
+// feature components
+import { RechargeHistory } from '@/features/TokenManagement/components/RechargeHistory';
+import { PaymentMethod } from '@/features/TokenManagement/components/PaymentMethod';
+import { TokensAvailable } from '@/features/TokenManagement/components/TokensAvailable';
+
 export default function Page() {
   const [showOffside, _] = React.useState(false);
   return (

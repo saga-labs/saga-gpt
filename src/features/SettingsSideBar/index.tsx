@@ -6,6 +6,7 @@ import agents from './mock/agents.json';
 // components
 import { HistoryItem } from './components/history-item';
 import { AgentItem } from './components/agent-item';
+import Link from 'next/link';
 
 const index = () => {
   const [agentsList, _] = useState(agents);
@@ -65,9 +66,10 @@ const index = () => {
             </svg>
             <span className="ml-2 leading-none">General</span>
           </a>
-          <a
+
+          <Link
+            href="/settings/billing"
             className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
           >
             <svg
               className="h-4 w-4"
@@ -83,15 +85,17 @@ const index = () => {
                 d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
               />
             </svg>
-            <span className="ml-2 leading-none font-bold">Billing</span>
-          </a>
-          <a
+            <span className="ml-2 leading-none active:font-bold">Billing</span>
+          </Link>
+
+          <Link
             className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
+            href="/settings/models"
           >
             <span className="leading-none w-4">@</span>
             <span className="ml-2 leading-none">Models</span>
-          </a>
+          </Link>
+          
           <a
             className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
             href="#"
