@@ -1,15 +1,24 @@
+'use client';
+
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 // mock data
 import agents from './mock/agents.json';
 
 // components
-import { HistoryItem } from './components/history-item';
+// import { HistoryItem } from './components/history-item';
 import { AgentItem } from './components/agent-item';
+import Link from 'next/link';
+import { RouteLink } from './components/route-link';
 
 const index = () => {
   const [agentsList, _] = useState(agents);
   const [historyList, __] = useState([]);
+
+  // get current route
+  const pathname = usePathname();
 
   return (
     <div className="flex flex-col flex-shrink-0 w-64 border-r border-gray-300 bg-gray-100">
@@ -45,10 +54,7 @@ const index = () => {
       <div className="h-0 overflow-auto flex-grow">
         {/* Model Settings */}
         <div className="mt-3">
-          <a
-            className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
-          >
+          <RouteLink to="/settings">
             <svg
               className="h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,11 +70,9 @@ const index = () => {
               />
             </svg>
             <span className="ml-2 leading-none">General</span>
-          </a>
-          <a
-            className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
-          >
+          </RouteLink>
+
+          <RouteLink to="/settings/billing">
             <svg
               className="h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -83,19 +87,15 @@ const index = () => {
                 d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
               />
             </svg>
-            <span className="ml-2 leading-none font-bold">Billing</span>
-          </a>
-          <a
-            className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
-          >
+            <span className="ml-2 leading-none">Billing</span>
+          </RouteLink>
+
+          <RouteLink to="/settings/models">
             <span className="leading-none w-4">@</span>
             <span className="ml-2 leading-none">Models</span>
-          </a>
-          <a
-            className="flex items-center h-8 hover:bg-gray-300 text-sm px-3"
-            href="#"
-          >
+          </RouteLink>
+
+          <RouteLink to="/settings/privacy">
             <svg
               className="h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ const index = () => {
               />
             </svg>
             <span className="ml-2 leading-none">Privacy</span>
-          </a>
+          </RouteLink>
         </div>
 
         {/* Model Chats */}

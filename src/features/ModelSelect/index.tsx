@@ -12,7 +12,7 @@ export const ModelSelect = () => {
         <Button link="/chat" image="/meta.png" alt="LLaMa2" />
 
         <Link
-          href="/settings"
+          href="/settings/models"
           className="flex items-center justify-center w-10 h-10 rounded-lg bg-transparent hover:bg-gray-300"
         >
           <svg
