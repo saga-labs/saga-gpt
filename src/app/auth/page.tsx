@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useAuth0 } from '@auth0/auth0-react';
 import { createApi } from 'unsplash-js';
 
@@ -23,6 +23,7 @@ const AuthPage = () => {
   const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
   const [, setImage] = useState<Random | Random[]>();
   const [, setImageLoading] = useState<boolean>(true);
+  const router = useRouter();
 
   // Create API instance with Unsplash
   const api = createApi({
@@ -58,8 +59,9 @@ const AuthPage = () => {
   return (
     <main className="h-screen overflow-y-hidden">
       <div className="flex h-full w-full flex-row">
+        {/** Left Pane: Authentication Options */}
         <section className="flex flex-col items-center justify-center bg-white py-10 md:w-1/2">
-          <h1 className="absolute top-2 left-5 text-4xl font-bold leading-tight tracking-tighter md:pr-8 md:text-6xl">
+          <h1 className="absolute top-5 right-0 z-50 text-4xl font-bold leading-tight tracking-tighter md:pr-8 md:text-6xl text-white">
             SagaGPT.
           </h1>
 
@@ -76,8 +78,8 @@ const AuthPage = () => {
             {/** Authentication providers */}
             <div>
               <button
-                onClick={() => loginWithRedirect()}
-                className="flex w-full items-center justify-center rounded border border-erie bg-none py-3 font-semibold text-erie shadow-erie hover:shadow-md"
+                onClick={() => router.push('/')}
+                className="flex w-full items-center justify-center rounded border border-erie bg-none py-3 font-semibold text-erie hover:bg-erielight transition duration-200 ease-in-out"
               >
                 <ExternalLinkIcon className="mr-2" width={20} height={20} />
                 Sign in
@@ -93,6 +95,7 @@ const AuthPage = () => {
           </div>
         </section>
 
+        {/** Right Pane: Decorative */}
         <section className="h-screen w-1/2 flex-initial">
           <div className="relative h-full w-full">
             <img

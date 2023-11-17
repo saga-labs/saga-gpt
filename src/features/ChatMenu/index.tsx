@@ -7,6 +7,9 @@ import agents from './mock/agents.json';
 import { HistoryItem } from './components/history-item';
 import { AgentItem } from './components/agent-item';
 
+// icons
+import { DotsThreeVertical, Plus } from '@phosphor-icons/react';
+
 const index = () => {
   const [agentsList, _] = useState(agents);
   const [historyList, __] = useState(agents);
@@ -138,46 +141,17 @@ const index = () => {
               </span>
             </button>
             <button className="items-center justify-center h-6 w-6 ml-auto rounded hidden group-hover:flex hover:bg-gray-300">
-              <svg
-                className="h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <DotsThreeVertical className="h-5 w-5" />
             </button>
             <button className="flex items-center justify-center h-6 w-6 ml-1 rounded hover:bg-gray-300">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
+              <Plus className="h-4 w-4" />
             </button>
           </div>
 
           {/** List Content */}
           <div id="channels_list">
             {historyList.agents.map((_, i: React.Key) => (
-              <>
-                <HistoryItem key={i} />
-                <HistoryItem key={i} />
-              </>
+              <HistoryItem key={i} />
             ))}
           </div>
         </div>
@@ -195,43 +169,17 @@ const index = () => {
               </span>
             </button>
             <button className="items-center justify-center h-6 w-6 ml-auto rounded hidden group-hover:flex hover:bg-gray-300">
-              <svg
-                className="h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <DotsThreeVertical className="h-5 w-5" />
             </button>
             <button className="flex items-center justify-center h-6 w-6 ml-1 rounded hover:bg-gray-300">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
+              <Plus className="h-4 w-4" weight="bold" />
             </button>
           </div>
 
           {/** List Content */}
           <div id="agents_list">
-            {agentsList.agents.map((agent, i: React.Key) => (
-              <AgentItem agent={agent} key={i} />
+            {agentsList.agents.map((agent) => (
+              <AgentItem agent={agent} key={agent.id} />
             ))}
           </div>
         </div>
