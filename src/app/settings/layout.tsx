@@ -1,8 +1,8 @@
+import { Announcement } from '@/components/announcement';
 import '../globals.css';
 
 // components
 import ModelSelect from '@/features/ModelSelect';
-import ModelGrid from '@/features/ModelGrid';
 import SettingsSideBar from '@/features/SettingsSideBar';
 
 export const metadata = {

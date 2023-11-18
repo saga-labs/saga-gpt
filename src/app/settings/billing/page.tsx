@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 // components
 import { TokenProgress } from '@/features/Billing/components/token-progress';
+import { RechargeTable } from '@/features/Billing/components/recharge-table';
+import { PricingOptions } from '@/features/Billing/components/pricing-options';
 
 // icons
 import { ArrowRight, Pencil } from '@phosphor-icons/react';
-import { RechargeTable } from '@/features/Billing/components/recharge-table';
-import { PricingOptions } from '@/features/Billing/components/pricing-options';
 
 export default function Page() {
   return (
@@ -26,7 +26,7 @@ export default function Page() {
 
         <section
           id="billing"
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 overflow-auto"
         >
           {/** Tokens Available */}
           <article className="w-full space-y-4 border border-gray-200 col-span-2">

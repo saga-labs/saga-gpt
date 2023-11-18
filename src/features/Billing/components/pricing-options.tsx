@@ -2,7 +2,7 @@ import React from 'react';
 
 export const PricingOptions = () => {
   return (
-    <div className="max-w-screen-xl">
+    <div className="max-w-screen-xl px-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-4">
         <div className="divide-y divide-gray-200 rounded border border-gray-200">
           <div className="p-6 sm:px-8">
@@ -11,24 +11,18 @@ export const PricingOptions = () => {
               <span className="sr-only">Plan</span>
             </h2>
 
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-sm/relaxed text-gray-700">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
             <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                20$
-              </strong>
+              <strong className="text-lg font-bold text-gray-900">20$</strong>
 
-              <span className="text-sm font-medium text-gray-700">/month</span>
+              <span className="text-sm/relaxed font-medium text-gray-700">
+                {' '}
+                / month
+              </span>
             </p>
-
-            <a
-              className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-              href="#"
-            >
-              Get Started
-            </a>
           </div>
 
           <div className="p-6 sm:px-8">
@@ -161,24 +155,15 @@ export const PricingOptions = () => {
               <span className="sr-only">Plan</span>
             </h2>
 
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-sm/relaxed text-gray-700">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
             <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                30$
-              </strong>
+              <strong className="text-lg font-bold text-gray-900">30$</strong>
 
-              <span className="text-sm font-medium text-gray-700">/month</span>
+              <span className="text-sm/relaxed font-medium text-gray-700">/month</span>
             </p>
-
-            <a
-              className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-              href="#"
-            >
-              Get Started
-            </a>
           </div>
 
           <div className="p-6 sm:px-8">
@@ -311,24 +296,15 @@ export const PricingOptions = () => {
               <span className="sr-only">Plan</span>
             </h2>
 
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-sm/relaxed text-gray-700">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
             <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                100$
-              </strong>
+              <strong className="text-lg font-bold text-gray-900">100$</strong>
 
-              <span className="text-sm font-medium text-gray-700">/month</span>
+              <span className="text-sm/relaxed font-medium text-gray-700">/month</span>
             </p>
-
-            <a
-              className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-              href="#"
-            >
-              Get Started
-            </a>
           </div>
 
           <div className="p-6 sm:px-8">
